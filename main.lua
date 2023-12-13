@@ -27,35 +27,8 @@ function love.update(dt)   --this runs 60 frames per second; dt stands for Delta
 
     --pacman.x = pacman.x + 1  --makes pacman "move" horizontally 1 pixel 
 
-    --this uses "a" key to move pacman backwards"
-    if love.keyboard.isDown("a") then
-        pacman.x = pacman.x - 1
-    end
-
-    if love.keyboard.isDown("d") then
-        pacman.x = pacman.x + 1
-    end 
-
-    if love.keyboard.isDown("w") then
-        pacman.y = pacman.y - 1
-    end
-
-    if love.keyboard.isDown("s") then
-        pacman.y = pacman.y +1
-    end
-
-    --to rotate pacman
-    if love.keyboard.isDown("down") then --down is the down arrow key 
-        pacman.angle1 = pacman.angle1 + math.pi * dt  --dt comes in handy to adjust spinning move to the frame speed
-        pacman.angle2 = pacman.angle2 + math.pi * dt
-    elseif love.keyboard.isDown("up") then
-        pacman.angle1 = pacman.angle1 - math.pi * dt
-        pacman.angle2 = pacman.angle2 - math.pi * dt
-    end
-    
-    --pacman eats
-    if pacman.x >= food.x + 20 then
-        food.eaten = true
+    if pacman.x >= food_x + 20 then
+        pacman.eat = true
     end
     
 end
