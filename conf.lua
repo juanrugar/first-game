@@ -5,7 +5,7 @@ function love.conf(t)
     t.externalstorage = true    --ANDROID only
     t.gammacorrect = true       --enables gamma correction 
     t.window.title = "Video Game" --adds a title to the game screen 
-    t.window.icon = "icon/game_icon.jpg"  --adds an icon to the game screen
+    --t.window.icon = "icon/game_icon.jpg"  --adds an icon to the game screen
     t.window.width = 1200        --sets the width of game screen
     t.window.height = 700       --sets the height of game screen
     
